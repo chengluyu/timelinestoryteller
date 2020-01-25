@@ -96,18 +96,20 @@ function TimelineStoryteller(isServerless, showDemo, parentElement) {
    * @returns {void}
    */
   function createImportPanel() {
+    var showTopValue = "35vh";
+
     var element = selectWithParent()
       .append("div")
       .attr("id", "import_div")
       .attr("class", "control_div")
-      .style("top", "25%");
+      .style("top", showTopValue);
 
     var panel = {
       visible: true,
       element: element,
       show: function () {
         panel.visible = true;
-        element.style("top", "25%").style("display", "block");
+        element.style("top", showTopValue).style("display", "block");
       },
       hide: function () {
         panel.visible = false;
