@@ -8,6 +8,10 @@
         "lib": true,
         "dist": true,
         "node_modules": true,
-        ".vscode": true
+        ".vscode": true,
+        ".vs": true
+    },
+    "search.exclude": {
+        "public/app": true
     }
 }
