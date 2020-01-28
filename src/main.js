@@ -6,6 +6,7 @@ require("../assets/css/style.css");
 /**
  * Libraries
  */
+var SVGL = require("svgl").default;
 var d3 = require("d3");
 var moment = require("moment");
 var introJsLib = require("intro.js");
@@ -1191,7 +1192,10 @@ function TimelineStoryteller(isServerless, showDemo, parentElement) {
           globals.num_facets = 0;
           globals.timeline_facets = [];
 
-          instance._main_svg = main_svg = instance._container
+          const svgl = instance._svgl = new SVGL();
+          svgl.appendTo('.timeline_storyteller-container');
+
+          instance._main_svg = main_svg = d3.select(svgl)
             .append("svg")
             .attr("id", "main_svg");
 

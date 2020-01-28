@@ -14,7 +14,7 @@ module.exports = {
             loader: "binary-loader"
         }, {
             test: /\.js$/,
-            exclude: /(node_modules|bower_components)/,
+            exclude: /(node_modules|bower_components|SVGL)/,
             use: {
                 loader: "babel-loader"
             }
